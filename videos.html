@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahder's Portfolio Website</title>
+    <link rel="stylesheet" href="styleVideos.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+</head>
+<body oncontextmenu="return false">
+    <!-- Navbar -->
+    <header>
+        <a class="navbar-brand" href="#"><span style="color: red;">Mah</span>DER</a>
+ 
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <button type="button" class="nav-toggler" name="button">
+            <span id="span"></span>
+         </button>
+
+         <nav class="nav">
+            <ul class="navbar">
+                <li  class="menu-item"><a class="active" href="index.html">Home</a></li>
+                <li  class="menu-item"><a href="about.html">About</a></li>
+                <li  class="menu-item"><a href="gallery.html">Gallery</a></li>
+                <li  class="menu-item"><a href="videos.html">Videos</a></li>
+                <li  class="menu-item"><a href="contact.html">Contact</a></li>
+                <div class="bx bx-moon" id="darkmode"></div>
+            </ul>
+
+         </nav>
+
+    </header>
+
+    <div class="container">
+        <h1>Video Gallery</h1>
+        <div id="video_player">
+            <video controls poster="" class="video" id="video">
+                <source src="videos/vid5.mp4" type="video/mp4">
+                <source src="videos/vid5.mp4" type="video/mp4">
+            </video>
+            <div class="scrollBox">
+                <div class="box">
+                    <img src="images/imgvid5.jpg">
+                    <div class="box-content">
+                        <h3>Watch my entertaining videos!</h3>
+                        <a href="videos/vid5.mp4" class="btn">Watch</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/imgvid2.jpg">
+                    <div class="box-content">
+                        <h3>Watch my entertaining videos!</h3>
+                        <a href="videos/vid2.mp4" class="btn">Watch</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/imgvid3.jpg">
+                    <div class="box-content">
+                        <h3>Watch my entertaining videos</h3>
+                        <a href="videos/vid3.mp4" class="btn">Watch</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/imgvid4.jpg">
+                    <div class="box-content">
+                        <h3>Watch my entertaining videos!</h3>
+                        <a href="videos/vid4.mp4" class="btn">Watch</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/imgvid1.jpg">
+                    <div class="box-content">
+                        <h3>Watch my entertaining videos!</h3>
+                        <a href="videos/vid1.mp4"class="btn">Watch</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- ###########################javascript for vidoe Player################ -->
+    <script type="text/javascript">
+        let anchors = document.querySelectorAll('div .btn');
+    let links = [...anchors];
+    
+    for (let i=0; i<links.length; i++) {
+        links[i].onclick = handler;
+    }
+    function handler(e) {
+        e.preventDefault();
+        let videotarget = this.getAttribute("href");
+        let filename = videotarget.substr(0, videotarget.lastIndexOf('.'));
+        let video = document.getElementById("video");
+        video.removeAttribute("poster");
+        let source = document.querySelectorAll("#video_player video source");
+        source[0].src = filename + ".mp4";
+        source[1].src = filename + ".m4v";
+        video.load();
+        video.play();
+    }
+    </script>
+
+
+
+
+
+    <footer class="footer-container">
+        
+        <h4 class="footer-container__header">Follow Me on</h4>
+
+            <div class="footer-container__social">
+                <a href="https://vm.tiktok.com/ZMYrsTDCc/">
+                    <img src="images/tiktok.jpg" alt="Linkedin link">
+                </a>
+                <a href="https://www.facebook.com/sena.teferi.73">
+                    <img src="images/facebook.jpg" alt="Facebook link">
+                </a>
+                <a href="http://instagram.com/reb.ira?utm_source=qr">
+                    <img src="images/instagram.jpg" alt="Instagram link">
+                </a>
+                <a href="https://t.me/elohim_picture">
+                    <img src="images/telegram.jpg" alt="Facebook link">
+                </a>
+
+            </div>
+            <p class="footer-container__description">
+                <a href="about.html">Learn more about me..</a>.
+            </p>
+            
+    </footer>
+     <!-- Link To JS -->
+     <script src="./js/script.js"></script>
+     
+</body>
+</html>

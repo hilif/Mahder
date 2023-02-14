@@ -1,0 +1,80 @@
+h1{
+  font-size: 30px;
+}
+
+.heading h1{
+  margin-top: 55px;
+}
+ 
+.about-img img {
+  width: 80%;
+  border-radius: 0.5rem;
+}
+.about-text p {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: justify;
+  margin-top: 2rem;
+}
+
+.heading h1{
+  margin-bottom: 2rem;
+}
+.information {
+  margin: 4rem 0 1.4rem;
+}
+.information .info-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.4rem;
+}
+.information .info-box .bx {
+  font-size: 22px;
+}
+.information .info-box span {
+  font-weight: 400;
+  margin-left: 1rem;
+}
+
+.TopPhoto{
+  background-image: url(images/img2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+  
+  
+}
+.about-description{
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+
+.final{
+  height: 0vh;
+}
+
+@media(max-width: 991px){
+  .about{
+    margin-bottom: 200px;
+  }
+
+}
+
+@media(max-width: 767px){
+  .about{
+    margin-bottom: 300px;
+  }
+
+}
+@media(max-width: 574px){
+  .about{
+    margin-bottom: 500px;
+  }
+
+}
